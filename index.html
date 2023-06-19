@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Dropdown Sidebar Menu</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar__logo">
+            <i class="bx bx-sidebar"></i>
+            <span class="sidebar__logo-name">Sidebar</span>
+        </div>
+
+        <!-- nav start -->
+        <ul class="sidebar__nav">
+            <li class="sidebar__link">
+                <div class="sidebar__link-row">
+                    <a href="#">
+                        <i class="bx bx-grid-alt"></i>
+                        <span class="sidebar__link-name">Dashboard</span>
+                    </a>
+                </div>
+                <ul class="sidebar__sub-nav blank">
+                    <li><a class="sidebar__link-name" href="#">Dashboard</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__link">
+                <div class="sidebar__link-row sidebar__link-row_flex">
+                    <a href="#">
+                        <i class="bx bx-collection"></i>
+                        <span class="sidebar__link-name">Category</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sidebar__sub-nav">
+                    <li><a class="sidebar__link-name" href="#">Category</a></li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">PHP & MySQL</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__link">
+                <div class="sidebar__link-row sidebar__link-row_flex">
+                    <a href="#">
+                        <i class="bx bx-book-alt"></i>
+                        <span class="sidebar__link-name">Posts</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sidebar__sub-nav">
+                    <li><a class="sidebar__link-name" href="#">Posts</a></li>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Login Form</a></li>
+                    <li><a href="#">Card Design</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__link">
+                <div class="sidebar__link-row">
+                    <a href="#">
+                        <i class="bx bx-pie-chart-alt-2"></i>
+                        <span class="sidebar__link-name">Analytics</span>
+                    </a>
+                </div>
+                <ul class="sidebar__sub-nav blank">
+                    <li><a class="sidebar__link-name" href="#">Analytics</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__link">
+                <div class="sidebar__link-row">
+                    <a href="#">
+                        <i class="bx bx-line-chart"></i>
+                        <span class="sidebar__link-name">Chart</span>
+                    </a>
+                </div>
+                <ul class="sidebar__sub-nav blank">
+                    <li><a class="sidebar__link-name" href="#">Chart</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__link">
+                <div class="sidebar__link-row sidebar__link-row_flex">
+                    <a href="#">
+                        <i class="bx bx-plug"></i>
+                        <span class="sidebar__link-name">Plugins</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sidebar__sub-nav">
+                    <li><a class="sidebar__link-name" href="#">Plugins</a></li>
+                    <li><a href="#">UI Face</a></li>
+                    <li><a href="#">Pigments</a></li>
+                    <li><a href="#">Box Icons</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__link">
+                <div class="sidebar__link-row">
+                    <a href="#">
+                        <i class="bx bx-compass"></i>
+                        <span class="sidebar__link-name">Explore</span>
+                    </a>
+                </div>
+                <ul class="sidebar__sub-nav blank">
+                    <li><a class="sidebar__link-name" href="#">Explore</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__link">
+                <div class="sidebar__link-row">
+                    <a href="#">
+                        <i class="bx bx-history"></i>
+                        <span class="sidebar__link-name">History</span>
+                    </a>
+                </div>
+                <ul class="sidebar__sub-nav blank">
+                    <li><a class="sidebar__link-name" href="#">History</a></li>
+                </ul>
+            </li>
+
+            <li class="sidebar__link">
+                <div class="sidebar__link-row">
+                    <a href="#">
+                        <i class="bx bx-cog"></i>
+                        <span class="sidebar__link-name">Setting</span>
+                    </a>
+                </div>
+                <ul class="sidebar__sub-nav blank">
+                    <li><a class="sidebar__link-name" href="#">Setting</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- nav end -->
+
+        <div class="sidebar__profile profile">
+            <div class="profile__img">
+                <img src="profile.png" alt="profile-img">
+            </div>
+
+            <div class="profile__text">
+                <div class="profile__name">Sergiy Chaiuk</div>
+                <div class="profile__job">Web Desginer</div>
+            </div>
+
+            <i class="bx bx-log-out"></i>
+        </div>
+    </div>
+
+    <section class="home">
+        <div class="home__content">
+            <i class="bx bx-menu"></i>
+            <span class="home__text">Drop Down Sidebar</span>
+        </div>
+    </section>
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+
+        for (let i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("active");
+            });
+        }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("sidebar_close");
+        });
+    </script>
+</body>
+</html>
